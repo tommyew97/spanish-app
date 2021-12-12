@@ -46,3 +46,12 @@ export const QuestionText = styled.h1`
   top: 15%;
   text-align: center;
 `;
+
+export const Counter = styled.h2`
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #282828;
+`;
