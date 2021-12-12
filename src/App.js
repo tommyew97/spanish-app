@@ -1,7 +1,20 @@
 import "./App.css";
 import { Container, Button, ButtonContainer, QuestionText } from "./styles";
+import { printWord } from "./utils/wordLogic";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [correctWord, setCorrectWord] = useState(null);
+  const [answerOptions, setAnswerOptions] = useState([]);
+  useEffect(() => {
+    let correctPair = printWord();
+    setCorrectWord(correctPair[1]);
+    setAnswerOptions([correctPair[1]]);
+    for (var i; i < 3; i++) {
+      let wordPair = printWord();
+      setAnswerOptions((prev) => [...prev, wordPair[1]]);
+    }
+  });
   return (
     <Container>
       <QuestionText>What is "red" in spanish?</QuestionText>
