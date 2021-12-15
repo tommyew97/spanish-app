@@ -38,7 +38,7 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-export const QuestionText = styled.h1`
+export const Title = styled.h1`
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   color: #282828;
@@ -54,4 +54,27 @@ export const Counter = styled.h2`
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #282828;
+`;
+
+export const LoginButton = styled.div`
+  width: 220px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: #2658ed;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const LoginButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
 `;
