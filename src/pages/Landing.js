@@ -5,7 +5,7 @@ function Landing() {
     <Container>
       <Title>Welcome to spanish-app</Title>
       <LoginButtonContainer>
-        <a href="/.auth/login/google" style={{ textDecoration: "none" }}>
+        <a href="/.auth/login/google?post_login_redirect_uri=/quiz" style={{ textDecoration: "none" }}>
           <LoginButton>
             <span>Login</span>
           </LoginButton>
