@@ -1,6 +1,9 @@
 import { Container, Button, ButtonContainer, Title, Counter } from "../styles";
 import { getWords } from "../utils/wordLogic";
 import { useState, useEffect } from "react";
+import { getAuthToken } from "../api/getAuthToken"
+
+
 
 function Quiz() {
   const [correctWord, setCorrectWord] = useState(null);
@@ -22,8 +25,14 @@ function Quiz() {
     setQuestion(words.question);
   };
 
+  async function getUserData() {
+    let data = await getAuthToken();
+    console.log(data)
+  }
+
   useEffect(() => {
     newWords();
+    getUserData();
   }, []);
   return (
     <Container>
