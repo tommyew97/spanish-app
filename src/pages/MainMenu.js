@@ -25,7 +25,7 @@ function MainMenu() {
         <Container>
             <Title>Welcome {name}</Title>
             <StartButtonContainer>
-                <StyledLink to="/quiz">
+                <StyledLink to="/quiz/10">
                     <StartButton>
                         <span>10 questions</span>
                     </StartButton>

@@ -109,3 +109,12 @@ export const StyledLink = styled(Link)`
         text-decoration: none;
     }
 `;
+
+export const SubText = styled.h2`
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #282828;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+`;
