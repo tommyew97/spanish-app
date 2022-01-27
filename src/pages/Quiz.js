@@ -23,7 +23,6 @@ function Quiz() {
     const [gameFinished, setGameFinished] = useState(false);
     const id = useSelector((state) => state.user.id);
     const name = useSelector((state) => state.user.name);
-    console.log(id, name);
 
     const { questionNum } = useParams();
 
