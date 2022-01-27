@@ -5,17 +5,19 @@ import {
     StartButtonContainer,
     StyledLink,
 } from "../styles";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { getAuthToken } from "../api/getAuthToken";
+import { useSelector, useDispatch } from "react-redux";
+import { setId, setName } from "../redux/user/userSlice";
 
 function MainMenu() {
-    const [name, setName] = useState(null);
-    const [userToken, setUserToken] = useState(null);
+    const name = useSelector((state) => state.user.name);
+    const dispatch = useDispatch();
     async function getUserData() {
         let data = await getAuthToken();
         if (data) {
-            setName(data[0].user_claims[9].val);
-            setUserToken(data[0].user_claims[3].val);
+            dispatch(setName(data[0].user_claims[9].val));
+            dispatch(setId(data[0].user_claims[3].val));
         }
     }
     useEffect(() => {
