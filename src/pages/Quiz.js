@@ -12,6 +12,7 @@ import {
 import { getWords } from "../utils/wordLogic";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Quiz() {
     const [correctWord, setCorrectWord] = useState(null);
@@ -20,6 +21,9 @@ function Quiz() {
     const [rightCount, setRightCount] = useState(0);
     const [totalCount, setTotalCount] = useState(0);
     const [gameFinished, setGameFinished] = useState(false);
+    const id = useSelector((state) => state.user.id);
+    const name = useSelector((state) => state.user.name);
+    console.log(id, name);
 
     const { questionNum } = useParams();
 
